@@ -1,7 +1,10 @@
 <h1>Books</h1>
-<%= @books.each do |book| %>
-  <h5>Title</h5>
+<% @books.each do |book| %>
   <span><%= book.title %></span>
+  <span><%= book.body %></span>
+  <span>
+    <%= link_to 'Show', book_path(book.id) %>
+  </span>
 <% end %>
 
 <h2>New book</h2>
